@@ -1,4 +1,4 @@
-name: Publish npm package
+name: Stage npm package
 on:
   workflow_dispatch:
     inputs:
@@ -38,7 +38,8 @@ jobs:
         run: node scripts/verify-package.mjs
       - name: Inspect tarball
         run: npm pack --workspace @muslim-icons/react --dry-run
-      - name: Publish to npm
+      - name: Stage npm package for maintainer approval
+        working-directory: packages/react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-        run: npm publish --workspace @muslim-icons/react --access public
+        run: npm stage publish --access public
