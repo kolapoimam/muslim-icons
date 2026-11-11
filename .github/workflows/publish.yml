@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Existing release tag version, e.g. 0.2.0'
+        description: 'Existing release tag version, e.g. 0.1.0'
         type: string
         required: true
 permissions:
@@ -13,27 +13,33 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout release
+        uses: actions/checkout@v6
         with:
           ref: v${{ inputs.version }}
-      - uses: actions/setup-node@v4
+      - name: Set up Node and npm registry
+        uses: actions/setup-node@v6
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
       - name: Update npm
         run: npm install -g npm@latest
-      - name: Check version
+      - name: Verify version
         env:
           VERSION: ${{ inputs.version }}
         run: node -e "if(require('./packages/react/package.json').version !== process.env.VERSION) process.exit(1)"
-      - name: Install
+      - name: Install dependencies
         run: npm install --no-audit --no-fund
-      - name: Test
+      - name: Test icons
         run: npm test
-      - name: Build
+      - name: Build package
         run: npm run build
+      - name: Verify package contents
+        run: node scripts/verify-package.mjs
       - name: Inspect tarball
         run: npm pack --workspace @muslim-icons/react --dry-run
-      - name: Publish
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
         run: npm publish --workspace @muslim-icons/react --access public
