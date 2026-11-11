@@ -1,0 +1,39 @@
+name: Publish npm package
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Existing release tag version, e.g. 0.2.0'
+        type: string
+        required: true
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v${{ inputs.version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+      - name: Update npm
+        run: npm install -g npm@latest
+      - name: Check version
+        env:
+          VERSION: ${{ inputs.version }}
+        run: node -e "if(require('./packages/react/package.json').version !== process.env.VERSION) process.exit(1)"
+      - name: Install
+        run: npm install --no-audit --no-fund
+      - name: Test
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Inspect tarball
+        run: npm pack --workspace @muslim-icons/react --dry-run
+      - name: Publish
+        run: npm publish --workspace @muslim-icons/react --access public

@@ -1,7 +1,7 @@
 {
   "name": "@muslim-icons/react",
   "version": "0.1.0",
-  "description": "Original Muslim-themed outline SVG icons for React",
+  "description": "50 Muslim-themed outline SVG icons for React",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -17,8 +17,32 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolapoimam/muslim-icons.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/kolapoimam/muslim-icons#readme",
+  "bugs": {
+    "url": "https://github.com/kolapoimam/muslim-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "react",
+    "typescript",
+    "muslim",
+    "islamic",
+    "ramadan",
+    "hajj",
+    "quran"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean"
   },
