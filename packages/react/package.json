@@ -1,7 +1,7 @@
 {
   "name": "@muslim-icons/react",
-  "version": "0.1.0",
-  "description": "50 Muslim-themed outline SVG icons for React",
+  "version": "0.2.0",
+  "description": "95 distinct Muslim-themed outline SVG icons for React",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,

@@ -1,6 +1,6 @@
 # @muslim-icons/react
 
-50 outline SVG icons as reusable React components for Muslim-focused applications.
+95 outline SVG icons as reusable React components for Muslim-focused applications.
 
 ## Installation
 
@@ -50,7 +50,7 @@ Icons in an unlabeled button do not replace an accessible button name.
 
 ## Icons and source
 
-The first collection has 50 icons in seven categories. See the [SVG source](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svg/icons) for the complete list.
+The collection has 95 distinct icons in seven categories, covering all 88 concepts in the landing-page catalog and preserving seven additional existing icons. See the [SVG source](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svg/icons) for the complete list.
 
 [GitHub](https://github.com/kolapoimam/muslim-icons) · [Issues](https://github.com/kolapoimam/muslim-icons/issues) · [Contributing](https://github.com/kolapoimam/muslim-icons/blob/main/CONTRIBUTING.md)
 
