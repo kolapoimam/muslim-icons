@@ -16,3 +16,9 @@ test('every icon has distinct drawing geometry and meaningful metadata',async()=
   seen.set(geometry,file);
  }
 });
+
+test('internal demo resolves the current local package version',async()=>{
+ const pkg=JSON.parse(await readFile(new URL('../packages/react/package.json',import.meta.url),'utf8'));
+ const demo=JSON.parse(await readFile(new URL('../website/package.json',import.meta.url),'utf8'));
+ assert.equal(demo.dependencies[pkg.name],pkg.version);
+});
