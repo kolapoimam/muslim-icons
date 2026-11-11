@@ -2,8 +2,6 @@
 
 50 outline SVG icons as reusable React components for Muslim-focused applications.
 
-**Status:** Preparing version `0.1.0`; not published to npm yet.
-
 ## Installation
 
 ```sh
