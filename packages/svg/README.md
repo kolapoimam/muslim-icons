@@ -2,6 +2,8 @@
 
 104 outline SVG icons for HTML, CSS, JavaScript, and tools that work directly with SVG files. Choose individual files or import SVG strings in your code.
 
+[Explore the icons](https://muslimicons.vercel.app) · [GitHub](https://github.com/kolapoimam/muslim-icons)
+
 ## Install
 
 ```bash

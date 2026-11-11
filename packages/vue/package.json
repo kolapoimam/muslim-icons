@@ -20,7 +20,7 @@
     "url": "git+https://github.com/kolapoimam/muslim-icons.git",
     "directory": "packages/vue"
   },
-  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/vue/README.md",
+  "homepage": "https://muslimicons.vercel.app",
   "bugs": {
     "url": "https://github.com/kolapoimam/muslim-icons/issues"
   },
