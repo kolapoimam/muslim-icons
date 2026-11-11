@@ -1,0 +1,10 @@
+{
+  "name": "@muslim-icons/core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Canonical Muslim Icons artwork and build-time metadata; not published",
+  "dependencies": {
+    "saxes": "^6.0.0"
+  }
+}

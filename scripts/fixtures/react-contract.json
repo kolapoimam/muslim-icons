@@ -1,0 +1,756 @@
+{
+  "commit": "3cd2deb443c71885998f594f3f0d3209d2f67d1f",
+  "exports": [
+    "Abaya",
+    "Adhan",
+    "Afterlife",
+    "Announcement",
+    "ArabicLetter",
+    "Arafat",
+    "BookRehal",
+    "Bookmark",
+    "Charity",
+    "Children",
+    "Community",
+    "CrescentMoon",
+    "Dates",
+    "Dhikr",
+    "Donation",
+    "Dua",
+    "DuaBook",
+    "DuaHands",
+    "Eid",
+    "EidGift",
+    "EidMoon",
+    "Family",
+    "Fasting",
+    "Food",
+    "Ghusl",
+    "GoodDeeds",
+    "Graduation",
+    "Gratitude",
+    "Guidance",
+    "HadithBook",
+    "Hajj",
+    "HalalBadge",
+    "HalalFood",
+    "HalalShopping",
+    "Haram",
+    "Hijab",
+    "Home",
+    "Iftar",
+    "Ihram",
+    "Imam",
+    "IslamicBook",
+    "IslamicCalendar",
+    "IslamicCentre",
+    "IslamicFinance",
+    "IslamicSchool",
+    "Jalsah",
+    "Jamarat",
+    "Kaaba",
+    "Knowledge",
+    "Kufi",
+    "MadinahDome",
+    "MakkahSign",
+    "Marriage",
+    "Memorisation",
+    "Mercy",
+    "Mihrab",
+    "Mina",
+    "Minaret",
+    "Minbar",
+    "ModestFashion",
+    "Mosque",
+    "MosqueCommunity",
+    "MosqueDome",
+    "MosqueEntrance",
+    "MuslimGroup",
+    "OpenQuran",
+    "Peace",
+    "Pilgrimage",
+    "PrayerCap",
+    "PrayerHall",
+    "PrayerMat",
+    "PrayerTime",
+    "Qawmah",
+    "QiblaCompass",
+    "Qiyam",
+    "Quran",
+    "QuranStand",
+    "Ramadan",
+    "RamadanLantern",
+    "Reading",
+    "Ruku",
+    "Sabr",
+    "Sadaqah",
+    "SafaMarwah",
+    "StarAndCrescent",
+    "Suhoor",
+    "Sujood",
+    "Takbir",
+    "Tasbih",
+    "Tashahhud",
+    "Taslim",
+    "Tawaf",
+    "Tawakkul",
+    "Tayammum",
+    "Thobe",
+    "Travel",
+    "Umrah",
+    "Volunteer",
+    "Water",
+    "Wedding",
+    "WomenCommunity",
+    "Wudu",
+    "Zakat",
+    "ZamzamWater",
+    "createIcon"
+  ],
+  "cases": [
+    {},
+    {
+      "size": 48,
+      "color": "#246b55",
+      "strokeWidth": 1.5,
+      "absoluteStrokeWidth": true,
+      "aria-label": "Example icon",
+      "className": "test"
+    },
+    {
+      "aria-hidden": false,
+      "aria-labelledby": "label",
+      "width": 30,
+      "height": 40,
+      "role": "presentation"
+    }
+  ],
+  "assets": {
+    "abaya.svg": "087515cc84c28a1b6415ef1c2aea1b052543b819f1f0877da75b5d5adb30a5bc",
+    "adhan.svg": "6dd02c6a5c21a6c9dcfefc3e1dcc2767e675e8c9ff75c5d3c89fd2a8fc2ed204",
+    "afterlife.svg": "6ebbe706f1a63d0d7e6188c474caa39e099c530c5afc064fa061c54178d730be",
+    "announcement.svg": "b477f8cd0435cf6b0f4c3a8813dc703923a3eb1c4acf474d2669fdd33896ad0f",
+    "arabic-letter.svg": "d41e3501f165ab2b182665984938330750a1d8c81d63e3bc1c74eccd5b36ea19",
+    "arafat.svg": "ff3c736985c7e2aa50b1697d160631d57f1e4008ffac14433a356f116036cd0c",
+    "book-rehal.svg": "f89f464b5c3484e776c9bc3ec7cb8cedb595ab70a23f68e01fca014c1b2f22e2",
+    "bookmark.svg": "76139fa89c05c3d6b27a09ca516647870a45b0851130c85dd72d1004e54d28e1",
+    "charity.svg": "710b7130f8bed50db633d6f73cf11bd9a5f6f2d59986c2c4c2a9a2de4c20729b",
+    "children.svg": "9a0bd794f5ef45c726ca563b17c89afe1b1e8a266be8398392b139cd93afa4a9",
+    "community.svg": "a402249c3981e5f46f47f24394c87c66f974e4f6d84c5d95f916f1523026a9de",
+    "crescent-moon.svg": "1dbb34a6e1a0515e5d5c2fcfc54ceed36da593d190eb02b1f8fc0a116f108c8c",
+    "dates.svg": "4aa1896da2ae1463e23a97777a64992ac875ff3272183b83eb617b07c080ad77",
+    "dhikr.svg": "0ee26e53b9b85a9a0937b66bf22229b42d4ca3a5a6359c246a55e12f115262fa",
+    "donation.svg": "2eba28b20dcba7a07ef2bd6fa8c331c3eb363c0941518f3130e0f39a644a4a52",
+    "dua-book.svg": "b2f168e69cb6470e33218075f926c0de55e0f6885c092f9c5fe5acdf1c62020a",
+    "dua-hands.svg": "a25e6b5f7714bf39da13bd87be6d364203fec3e9f31266d79e8bbbc6797c41e7",
+    "dua.svg": "831e7ac51828212bcf48a3f464e40d0c9e2db11c957e9f360ae4d69038ceb489",
+    "eid-gift.svg": "819b7bc27dd7a20dc1a447c3b47b3b5df24303d05bfa23f02175483742030428",
+    "eid-moon.svg": "0005ee0dcb73d894b3f10318a96de7803f22e84faa0fc222fc509042bc3653ad",
+    "eid.svg": "d0f8558e083253ecb3d3473ad460edf0f7c941162b12be3914533b7f56e81c4d",
+    "family.svg": "ed7cae897bc392b475bd96607fed8d71412933a3bc5a9be3776ff499f632a593",
+    "fasting.svg": "0200ec3e20b5c25f341c56e266c19c062d281636d2f2d03cc2908098ff0f15b0",
+    "food.svg": "61b53836637854ef1996850f5ae6fcf3e0cfe2ec0984b2fbdb6153dd4d4f54dd",
+    "ghusl.svg": "2326af234d50e42cd4933ea8975286a14bb3f0cceb25eee4b4c73574457dd892",
+    "good-deeds.svg": "e9bbebf3bacea167d81337721e026e6d788893ae79d05e647536f463b5b86967",
+    "graduation.svg": "001f693db39ca68ae78ba0412d11281f57e2a845bddd9bda5d153b21e99abb9a",
+    "gratitude.svg": "d842adc220e161732c4055134c79cfb5b5df43411b0f92ac3ff10428875c1777",
+    "guidance.svg": "27cf5d15603190981afb6aa8b9df36ad8641e20aab121883b21433de487f2fb5",
+    "hadith-book.svg": "ecfa3416753640fa895d895fdeb67c13360b294fddba08a909acdb1b30aed4d9",
+    "hajj.svg": "8fc96a8205557ec25096c4fa5d234c0fbb71e0382526c67eff90c67ab56fcf9c",
+    "halal-badge.svg": "14f58a817e92cb995d8a694940e184cb5ec9ddd4ccd364b55cccb0aeb0121a91",
+    "halal-food.svg": "d270824686474b6f887aa68820b139e6ca9012d75b9011aeb2465d8936008539",
+    "halal-shopping.svg": "34951e655414f6526f037ecd83f80d990735b4ad1d7f88f00269fcea9a85c101",
+    "haram.svg": "07e7b306a1ba3586f372bfd8e3a7ba74e0d71a71984ca7e58180817d2dc1c1e6",
+    "hijab.svg": "eb9755bf201706bac21941fed1a331507cc51827e0bc5abb396457ec15e6b510",
+    "home.svg": "8a3ebe8b62336e9fd70e1cb42847db790e5fa36e2075eabf44dc28b25e168730",
+    "iftar.svg": "f00bc5b9e428e6ff2f9c08b36571ea4ce36142630d7b9b80677a153beeea39f1",
+    "ihram.svg": "c885d6b73078736578d2ccfe5db951ecae57ed7acedd6d647e2e31bfe7927531",
+    "imam.svg": "b86cbb1cff2922a3177828413818f7cab33969991c1ba24de7bb8cb9e35d3f04",
+    "islamic-book.svg": "85b1d44f59e1267d72d3d4090ae9c79be98543e9f4b7ce72d4c315e71fdb3a59",
+    "islamic-calendar.svg": "41b7958db8b43a1e30c7ece3b9e25a75a1065b0513d14ba363a7658b8d5edf0a",
+    "islamic-centre.svg": "3d02ed104b881ce2bd56aed19cfc486de95f4197ed6d258406cf73506b49ef6b",
+    "islamic-finance.svg": "4b966447e60d66d8f810d87afe69b946b00cb8658114c837a92c6147eccdabf2",
+    "islamic-school.svg": "8670aae3608f1f242c16630af736d00d9aa6b47a95cea5709d33672da13bbc99",
+    "jalsah.svg": "a7730a1700e887fa9375716e168fc692567f4a2bcf9a8de9a00130105135ae73",
+    "jamarat.svg": "c231b347abdb693842ce2c1b3c450f8ba32638add623df2936a13184d5556ec2",
+    "kaaba.svg": "46d0e5b5b900ddebb56843ae1413304c0eba72de6439446606fe34fa1785b43d",
+    "knowledge.svg": "ec42c37f6aeaee9842914bb48785791bbda19de53a61245f0633e19f395118e2",
+    "kufi.svg": "0601f302c7c761fd7e592c7d79600cfc40a69000a8b892bb1d6721c5b5cfaf83",
+    "madinah-dome.svg": "f07c116a97f9b8d7a90443ffff99bb29a6fedca41f08c2fdebeca946c65c51b7",
+    "makkah-sign.svg": "f314eb155cea074d4f7416b6a9c108957ab001795aba4811a12d412353e030bf",
+    "marriage.svg": "4ebe60351055aa2a5b4869bc630fc1b25964c4db2f4c7a57d24ab598cc581051",
+    "memorisation.svg": "6e57358b1c28c4f31c716e822e581e3d97f7c205952c8643c49009ea3ad4af37",
+    "mercy.svg": "ecad2e66f8f650306d786a5a732f5b6a277ab2c1b1d69589838186069bfbe37e",
+    "mihrab.svg": "8ffef311381da229adf5049d0abdbc87f96ccc0d16cc18a56cc259076bdfcb00",
+    "mina.svg": "ae92858b6e43aa56bf1db3aecb8c6a0e6cddd465c7bed572010cd4e5f24e5012",
+    "minaret.svg": "b8841367b041851ffccdb1fd9272fa876cc5ec79a8e7ce57491cf49761b2f33b",
+    "minbar.svg": "3076c1fbdbb40bc4fbb6f14a38b701d33777efd2bf5f835fae66764ff298f54f",
+    "modest-fashion.svg": "2130670862649ca1856d471838317b5a6a62b777ad3b19e061c333c85fede542",
+    "mosque-community.svg": "61de12eed87c6f36b32689991aaa1da2770741878e578d83ee24b396952df285",
+    "mosque-dome.svg": "8c5d76f0f0e224bbda201a68e34df9a8d35004676574512abd64dee9fac9753c",
+    "mosque-entrance.svg": "7b02ff9e455987228888ca289df59252d21029874975560876837f2d8ec76438",
+    "mosque.svg": "a6187441d66328c95550ab5716da814d96a37d71a9fd14dc5f4b119f2e785a03",
+    "muslim-group.svg": "b104feed3b0b9ce757bfc05b80a8c75dce3c4935a4d97d61c0b851d72affed53",
+    "open-quran.svg": "fe19d13c2c1f0e5a236f682e46fafef934fa193354dda57bea5e4ddc6ed5f9e3",
+    "peace.svg": "d03112c4a5a230b9fe281d8b37cdb4c5d245b982d506d4307cd740de6557de53",
+    "pilgrimage.svg": "b9bb0451866924de5c88f6dd69cd02f1706ba5435bbf0f1e0db63e429eb9299f",
+    "prayer-cap.svg": "006c5f3d22a18fdea12660d72a242f0bf7bed474a817a3cfab653240bd1cdfe5",
+    "prayer-hall.svg": "6911cc5e7e78d33a1b9806990c86ada16e1634fe4088a09480f518733d1af0ce",
+    "prayer-mat.svg": "7a4ef62aaa4b4f667f64ca356134edb67b690a3168e34e562ec67962a66ae254",
+    "prayer-time.svg": "e48c3757766ad9ca427a28a79f2fe49d856a126eb941176b07526e646bf461e2",
+    "qawmah.svg": "216873b2b47e0373a70f4fda44f1426d386589de078438e5e3598d796bcafe65",
+    "qibla-compass.svg": "8894c33a9580116be93b6a820e6fc1b0bd9f2d87843749c42fa605d136391207",
+    "qiyam.svg": "157bfcf5f02af6a2fbebbcbc102c8956280879528216f34b9cc6f8ec9b0c1964",
+    "quran-stand.svg": "cabbd0605dca6e91f1d49a347b8d5a881076d47aebdea47a3f33b669209ff6d5",
+    "quran.svg": "2a44f7431400da07fef91735bdcf57c67910d3b6df0439443f8142449c67e6a4",
+    "ramadan-lantern.svg": "7c1211812f3755dbfbb8e439a521077e60fe76dc77c9c33e3f43682fbc12c92f",
+    "ramadan.svg": "b853b2b6737394cd1610e448da1ff3cf525811ca8f5ec53266a7a431b689d84c",
+    "reading.svg": "270a36bea70887bfa1dcd04bb92e1431df6a204a90424105c68081086eb13d06",
+    "ruku.svg": "67c5ab2a6ba973824ff7d3a36088115143c3f9ad90a551cb5f6dd49acd3d38f5",
+    "sabr.svg": "dea776346580ad25764e1c84a9568308ba4673fe54ccc64eb37506904737f3a7",
+    "sadaqah.svg": "8c1f4f9e85c322eb118f385529fb5d7e057768380fb507a3dc2db5ef382bb4e7",
+    "safa-marwah.svg": "6c7e7a26ae97cbac4ecdf9bfa917da6e9904610b50e736cccbacd63f2f6d760b",
+    "star-and-crescent.svg": "9c24f77a2c3361f1b40ab86c35a8c22246c1f088a2fd26769557c1d7422cb5c1",
+    "suhoor.svg": "2f0ead79ca8347efdddb687d472cae2bb5cfa3fa3197722eeb90ff399a092220",
+    "sujood.svg": "dd84f474d47aae60d8bdea74e1148f6df13a80c318edb19d86536ccae41d2f84",
+    "takbir.svg": "0f2645adca902b0bc7a3135ce79b765f945caf9e1ffcc5e42ddd269d0b757610",
+    "tasbih.svg": "8c0a40c634c49682b76df181505513107403cb93355f7f8ec44a631b11a537bb",
+    "tashahhud.svg": "95c39c8d93fcafb169efc126f03e644036f5633df6b5bf4d7a033661079afe04",
+    "taslim.svg": "748bf586908d7ab55fd89acd7b3cab78a536b218664f3df3347921f61af02888",
+    "tawaf.svg": "20bc8651a275afed66cfeba391098292784dd318786855531e0af9cec7e5f1e6",
+    "tawakkul.svg": "a7e187550d60b2d9b7be11018163a4a84047681958b2ae70d817c9fe865b2c30",
+    "tayammum.svg": "351bab0115e8b42a53850bd64de7cb4c335278e75b2ac3f368ee57c1041f75e0",
+    "thobe.svg": "01c631e2c7346d2459cf51a30379355bf48bd97c1d9db852459253bbe3535002",
+    "travel.svg": "bb5f89b37685a1c5310252c1dd90452aa930671f26974a2d41ec579e68c3e92d",
+    "umrah.svg": "61ee827b5e9434c6907a9f388efb96ac4fe503a07bb9d1ff815a0c76ca55b2fd",
+    "volunteer.svg": "011f178bf6c5684598a7583faa444202bbeb9252b83df2952679915d8da78b65",
+    "water.svg": "55d33a43b8137f56c45f736bd0ad996876c572c7b7321a632a0f87ec7de7d095",
+    "wedding.svg": "6d6a75087fee18988d654852501e0fc3357b83f8cb5d7c88034b0ae3c64e18bb",
+    "women-community.svg": "4d3666365edabe1fc36c28622c8afc0e23ab8fbcf19cad7ac40f707ebbea0d97",
+    "wudu.svg": "5b45971b1164ba857b4539070f7cd8572d603f5c8d720805da0f819683135abe",
+    "zakat.svg": "dee2b4e67957fc0c77062d5b16bb5bbffc58073ea7a66277be06c10a3d7b0cc2",
+    "zamzam-water.svg": "b14eb89fda895081a45eb27e1fb4cae81dd40beb5064742f126e33335f2e42f6"
+  },
+  "renders": {
+    "Abaya": [
+      "a64e47c63104a2444306788bbb2e376ad0ff5d79bcdf9e08f21ee5ed9e1e98b8",
+      "33616b2f9051d70749fa937ad4be89e6f00575c86be123cb62de69050bb08428",
+      "277f6e1fd00748c27db1c652c896f46500ff7f963c3689ec4c2fc20a644ba05f"
+    ],
+    "Adhan": [
+      "a78ecd91d4e395e368ff1a89e7427ce91506ebcc177d48b1a3cc551825aa11ab",
+      "11f5c1487575c66a2f5dac8874cc14bc9223095a2206322db5740f8f760afb0f",
+      "a56411efe3c79b2b8a1019391e04ed446ebe1d2febef1c77b9976f0b1a611f36"
+    ],
+    "Afterlife": [
+      "10421788487b104d1880bc9e40363f8e13771529bf2e2196354217061049907d",
+      "40755c9ec4bf550a3304c34342d0aae7646eec38abcbe7890d926590dfea2b23",
+      "ba51bbbd2d21dcf0e2cdf8b3baf010c3715435764270374e4c07fd758fc0e3f7"
+    ],
+    "Announcement": [
+      "178d0c0b19da89884d8cb0e37e8208cafde27cd4d5038803c92f02798d3db7db",
+      "13d5b555d660237fa2f6a8daa261846164d0a5d2c388793f456bb6e53cee1f47",
+      "59adc5641b5d1540a6f37dab73943b22e3f5f6a6b4dffeb7c0bb46b416aeca41"
+    ],
+    "ArabicLetter": [
+      "494de4906fc69a8976b53b7577aa138521c6e47ec8972ccc26c45a8e7e847a04",
+      "2575f115fe7d650320c8fee0fbc74649a315ae510b057eb7046abd7a5b91a6e8",
+      "2d5cfee2778947953e94b4f3145bbd4f9118d9d344d4ebb0c5490152ac47564c"
+    ],
+    "Arafat": [
+      "75ca0828dc39033b01538cf73583dc553754823ea057c60b2f9ab4fcac2ad272",
+      "7271e79bf8256e51c2510546cad720aa1cd1e9bb2638d2cb631e6ad944fe1016",
+      "1661691aa8a723603beb3d62a85b00a4395b12887b20af4b8b87b54620c5bfe5"
+    ],
+    "BookRehal": [
+      "a9776998cc796eea7de2ac7e6a948610f863cdd3192417181ff5b11a0b39fcf0",
+      "df0ef5bf82f622010e26607ccb3b5ecc23ab4c86de4120ec0c1392f19fd86733",
+      "018865265d1ca86d064a45fd3211106081dd4572fb5b1f50ce6cdd45fc3dae57"
+    ],
+    "Bookmark": [
+      "85bbb3cb810bffb406417b7291a9a9057734ca7c9b66254e6605fdbeb988b4a8",
+      "32d594822025cc05a3be32e785ff63e46dd5ca01177872111a2e7c408ae09c32",
+      "51c3220057b420b0c905bda0bb65af241eb918156a7046b22d828c7dba1a9abe"
+    ],
+    "Charity": [
+      "76153c5e0b0ce7769c0d6444b51c3a19d8b04f8f64c42364d8b453f2468fdebe",
+      "3e8bb12ae764440c6526f2fc32b7457b92241d4264b618eaff4f5c13dd93c025",
+      "5ea670169cac07a8cef987941b19f10c63a0f2567d0a61c76060967c23f08ef3"
+    ],
+    "Children": [
+      "3520f556eedca3f43b9ab547774bd16ad12cdb64c8f563e1163428cbe191cbb5",
+      "7a5822ec8eaec53effcec0ab38f9d98cd36e2dd3e813f4e5c3880264ff2421e0",
+      "dc0cdae6665afdfbc7e0442a07b689acad447700f883a85280b60ebc28f40180"
+    ],
+    "Community": [
+      "3623d8f91900863a1f7ea2275ef7621276dfbc19e9f84a69036ba2b5c12be24d",
+      "443b09963cdb7b90266c243805081599a52a110879f1620a9cbd57682d68b334",
+      "8dd3e3125b77237970b9cd277136e43d54ca2964b3a04f64f3c1a8a3e74fef21"
+    ],
+    "CrescentMoon": [
+      "03ab5f74beb5e795bc646c1cd59eeb71d20fc3629947317f11e2d6f7fdeae824",
+      "8fbbf2bbb37486c4e30cc612dfd835faf110df21149cdeca0827268817a33094",
+      "8c76a67b8e0b11ecffd3b8451c89b03fd9072e0b33334987e1b202a26161f270"
+    ],
+    "Dates": [
+      "adc21da3dde1a36da6f94a0c05b0fce630d652f920f88d152dcb8f688a8bab4d",
+      "cca62fca363766c735946c9336e58d2272390c132ea9d60edef46f1bb5ced6bd",
+      "33dbae7cb2d2085e7f3870f05680a512107a2ad9432961076cded469908b65a9"
+    ],
+    "Dhikr": [
+      "b0730a5d3601f34358187f321e46a69ecdb0297333737d4b64f75c77ea8ebc80",
+      "93246ca04db540266176f4c83da972a92194ebe8bac834caf66cd1a7ef2769be",
+      "901fc2fcb7c7e62fc5b5d9f6a4e4da5b51ca9bc05f57bfbc316bf0397539827e"
+    ],
+    "Donation": [
+      "9f51930d7ececee9861f836bf532b51324cbaaf2d865100b1ba5d1cdd463e876",
+      "23599f25fb11f986ee1fff59280f0818e1f8a98ed5adb8414dd77a4dfb0eb5ee",
+      "61435f5b601a41a1fce0494c743f847cbef12e7f6a79cc9fe61f6aae7920e4e7"
+    ],
+    "Dua": [
+      "3825fd2f4531954d4fff12c2ef225db54e44981cd959ba65a57809efa6712da7",
+      "98094ee8928865379d8f623cb8899f8b24efb26ae9111c7d43daa8f83103032f",
+      "7f7cafc4571ad212f4721a3e7ffe591df0723b7cb8d6676da51374d79e1856d4"
+    ],
+    "DuaBook": [
+      "89cc5275ba8eb4366e7a1c9301c9966adce0809e10d30879ef8b3964bea76398",
+      "bb12af9f0f3070cdb7844fe59ccdc1eb39b853bcbdd6dad9021572a2937a8b69",
+      "3e7b3eb1c2e88399630b51910d3b45d51ea998b25b260635ea00a013537a3e32"
+    ],
+    "DuaHands": [
+      "5d95206a6d4fd8b2045fd68a349f9a0dee4fce109e3457dd467ec450c3b815fb",
+      "e89ad35be5ede4b813d8e14ca4aae464073e97a4358e1a3a1a1d61ad471a2783",
+      "f1f04930c3263132498f386cc7dca1c8b4e66d0033c3bf3edaa822995ea5a81b"
+    ],
+    "Eid": [
+      "8fc42d91a410c23f97f4dcf54577d12f3dbb2037db93bd19407607167b10550c",
+      "6abb7b4f4f5510ba120b12328fa7223edae70dc4228f3f4b6d504d1a82896061",
+      "40d5c376f04ed0028d3acb38f0e06c40fe76659b4723994c1a5e5c86a71a94a9"
+    ],
+    "EidGift": [
+      "c060460ab9d7eb76b547a0d337d56f5353da139cc767e2ec9009c25efe3d603d",
+      "ada3718ae3cfa38d7e6db5c74c8a5890a26b5227aab8ad6cc7922bbf3e4ff758",
+      "796501a9ce10af9e07d54b65f075f51a1955df04118b1f0ad969aa498ae247c6"
+    ],
+    "EidMoon": [
+      "22b3fcffad3e69733bcc05ab91b9b78707182d7e7c9955a9cc13ae19ecb0c06c",
+      "f57761f175c583347908bbc2d3d60ff70ecf680744a807509ba5ed6f7a4be8f1",
+      "727a19349041afcf3ac9d993349cc6f46da78c9b09c3c81389e1a839d9e37f75"
+    ],
+    "Family": [
+      "df7f8fd0976d870183749a33bb614a0e38e9718224d3efced766fc6c48143c24",
+      "de49d53bcf4971ee7ce25c958a2b68f4fe1ad795cfe8e34324737f4c2f60b12f",
+      "1355a9c4bfc4cd701f5c89ccbc6bde24c60fb6a92914f4d23ffb7480f5e0ef64"
+    ],
+    "Fasting": [
+      "8e3cdbd209f2bca61d0bad113d805108f21944e38eee1342898c7e31512a119a",
+      "3c43cb94144fdfd0362486d95bd0a48b52ed40218f55f05e50e98e961c2c8fe2",
+      "f787fdbb14038c5ef25e1a32eac9b7f2b3e5f332f81d49bea451518992f6f7f4"
+    ],
+    "Food": [
+      "c403a52feaa69ca7ac302006615c88b369eb6b934df91a1c79f5318badd03dea",
+      "5788a234a38b9773044322becbcd37bbebf4900fbbab4686c6ea5b8c16c92b2f",
+      "4909af9996e5d7c13472d02ec3a9c0c140cc348e872bd488ffbe0b29629f29f7"
+    ],
+    "Ghusl": [
+      "15cef4155d0837a91269453a2d7e346f7193a64eefab857b249ab2d709e28637",
+      "57b73f19b60139b8822978344fc30bccea540d52438ee53ede5cc9609e9c15ae",
+      "142aca98b667808ac504f843c7966052e366ec27b00c0909f682028838de01a6"
+    ],
+    "GoodDeeds": [
+      "3577d776365d56cf7cab91b11503c6271a270101e7b3355f2c35ce9885223efd",
+      "c40f02ae9b9930b27773a2a98368d74babbbfb5586f45ac5f3637bd127f1b54c",
+      "41e811728f2fbf449113d7036adf8f45352020cc70aefe0e9c8fc6315e8c051e"
+    ],
+    "Graduation": [
+      "12abc4f7de7565772b8d2990c02a0358868ff2b625ce31c574cd1239b1b2aee0",
+      "393305bcb850d43d8c8a63e0f09809a702527c2c1b785249bc0a6d7a791c179f",
+      "779df8720b6e1052c87e41be9944f8aeaf73c5d32b4406888de643287457e9bd"
+    ],
+    "Gratitude": [
+      "fb691c6501af7202e2dcade8d875292fa2da1bc8a511e7b8a97bbafe606923b9",
+      "2c5e105ecf3ae7cc09b45aa779bb482d251c197cd547761489c7b1f0bd0f856f",
+      "b10c4aa487fa50a496514263a229ba20193295049bc3fd2dd252655b04ded16f"
+    ],
+    "Guidance": [
+      "cc25e4cdaf81b9029de3603f284e86ee9f6f07910d47a72a6f8fc4f364216312",
+      "725b33f420859b8d762ee89df3afe7252dde9efe21d7f5172b564b3949bd83f1",
+      "687a4ae73d292a592f8296dd9caee38823b5a8f415dd2dc05618528e41688193"
+    ],
+    "HadithBook": [
+      "a9574ef8cacc6c7c5a48a8dcc1a4598624d3bab0e31e49691016d406932ba154",
+      "0e6d96730044251e00a8a0dd19130ab17859d71e39c04b2dbb6aaf0941fe65e0",
+      "8839680cd2c0b9a23dd2e886daa43fb01c5b7ef07a1c94b50520d68f0839067a"
+    ],
+    "Hajj": [
+      "edb4fcb3c94ef5fda1a56341410196ff84ff14e58ca7abe7b9e6fd7354c265b9",
+      "bf98efdf4a29f3dac0d8087a4ab5018ddd2ad61bc5e87c6a279f7a2069fb59c7",
+      "9bb9112f8fd196d94dc954293f3cbda93feb5ec97351b55c75026eaa418da9eb"
+    ],
+    "HalalBadge": [
+      "9196be6b0c63de8615642c74d1c3e6ec93a360ce99596d9802525f47fbcfcc41",
+      "7faf619caade4d90375d75f9818c4ffb893ddc2f3f4394dee246435c6c27bd8f",
+      "64207b7221ced0efcaafb0210c9b1708f590a575339db4c52ea5a0bd49cd9270"
+    ],
+    "HalalFood": [
+      "cae995f900f90975b30ecc3b4c6296bbc60258fa5d2eb6c343c14e4c83626127",
+      "8a99e46386b9528c8ba9a6abafa90bcee257d1508fc0ddadc4b0935c832a716e",
+      "635157add0ba3ef9e640d44cece85019b5a9f93f34c5eefa336e6e2e0d407bb5"
+    ],
+    "HalalShopping": [
+      "a4a902c56512b03b6b157e29b367aed7618e16340c656ce4d2c099a9a7377903",
+      "c994f4e6dbf587e760e82dfe0a3561ed8fcdd0e22e2b53d82bc4508c4d33b397",
+      "21a5bb9caefa654252c9d388c231d5a8924f2361d9ecefadcd4ec55ec1149dd4"
+    ],
+    "Haram": [
+      "00413e1b143dabb04646386d25a370effa8052acf9425841de3d54421ec74cb5",
+      "6db2c300dabaf3eadbf642d2cbbc89d3e1ad7ce81638ddff3aae55064cd4dcca",
+      "e21f9e402ae357ae8a554462c9e32f1da6efb88c6ba0787cb40e1cfcecc4f0ba"
+    ],
+    "Hijab": [
+      "5fe94fd95ce77d5b22cfd5ce9d4a0c345b38efad7d0d6a3fa81ea9e20dbe2a8b",
+      "562c942dd68e342bec9d12751b3622af390e91b564c9c9bda218b727ffc411da",
+      "bc871ee1693f5069a31a63e3636aa398bc704ae0534ea0ffc7d23d72fa021f01"
+    ],
+    "Home": [
+      "c58ffe258742338760c5d49e404673b5b0fbcc0b00e1858ad8eb74665d241521",
+      "ab5421d9a2be161778ce2b749ab599e00e8b7d4d73b586729e5bfe676d2936e3",
+      "b53a88692e4a24294675c7e8ca6354f8c91f9b63a669385614b77fe7decddf4e"
+    ],
+    "Iftar": [
+      "2e5837572b509ffdb1cf120b6cfa0b71f2cf584d291974d42e9f529a34fd9392",
+      "e58b97779cee836f7f044c9056cc6f486628b781633c8d7804ce064ae7052695",
+      "9339a903c048179164d8a815b4152f75031827812900d3cf07f0e522fdd66c03"
+    ],
+    "Ihram": [
+      "4fe1e8d226a20d906eee12756c3c28f7404c867a991470a8795273a9f049e3bb",
+      "acd050c2b1ffd12b5d2583047cc2b6658d8e0f13c98c9a3c8a25cc54cb8b55c6",
+      "0384f88daf49a4ebc1ac67b6460f66e826044484789df324fcd81487d4bbe459"
+    ],
+    "Imam": [
+      "f95db2c72536c9223cf5ed813d7e110bc6737bb5a941ece852e9fb4126d52feb",
+      "7b0a0a5624d2b7726d6af1c8be86b5a388dbc491ebde0cf56dd0ba025783050b",
+      "19478e465208a9022b6ce2892625b140d28db16b82368a8b43ac8decdbee1193"
+    ],
+    "IslamicBook": [
+      "0712dd2188772fa000e6348a770927b52988a5415963830dbdd2cdd6ae2a8784",
+      "8b963349ad2125e2cea3b6cf74c62a733da48a7e7a2e349d9ab8ec137b7b3dd6",
+      "c60f0c38c2673be055ba26c0802d0cba21937ed120089ce1ac230ba73fee7cf3"
+    ],
+    "IslamicCalendar": [
+      "d80936ab37fc97550974309e5490fc193bf7fe289085fb834e3e746ceac195c1",
+      "ff4e9e5649598bebb4c6ee52c9363fa1d2a34aa6f7282ebdcf0ba4fd8500465f",
+      "ac78723cc84e80ef833dba78c0fe2030ac067b52b443917234e31d8551fd3bae"
+    ],
+    "IslamicCentre": [
+      "e8fb27f6b4e0989867831d2aef5e5e413ab054bb7fa5280fa9e5f4f1a855abbe",
+      "ee3cd2487c59d1de8fb212804e6495186e15faaaa7541cedb85795848fe9370e",
+      "95c1af24cdadacea284be8d297a403b8073d4dbd8213294fda4b9d0073fbd831"
+    ],
+    "IslamicFinance": [
+      "5287e86a41f338439d130f437c64c524c7f4915d62cc7fe958fa4fb5918130a6",
+      "7c1ae916adb8ceb622460033b6724f75beb259ee1a9c924ccc6779982985e4d3",
+      "85a3a204396da378c9eca89baa9f9eb1dc6dd1b9bb7a3825daa870f5f01da94c"
+    ],
+    "IslamicSchool": [
+      "67f836049ef61e20ff93540e31bff51e84b89c56fdce5c8881b7422bfa109fed",
+      "c23efe77740ae932cc354191f1a7f0aa77f226474e8781a63e5d2ad2238c752f",
+      "4bdddf0b832c3e1c934a7bc6d01e820eb7c63a88177be551afd889837209af12"
+    ],
+    "Jalsah": [
+      "a9f4882a3169839a917845734c0bca24627d48de2f10b9a8b0af9b2caccbb4f3",
+      "1a250fdadb853916d44c2767300a30b8036303b57088d8055e3d4180fa5b6f3f",
+      "6df921eadf10b52b59f47ed2bf3866dbb415915d4d86eedc5e51deeb97bf8a4b"
+    ],
+    "Jamarat": [
+      "8a5ae4684e000486751a12fa7cc25925d42133d592d6ceaf67ff7998a77494d7",
+      "62517950960bd1f2d2007292e9aaefea7652013b52e8fc4970f3e7a3e1e00c27",
+      "0c843b21ed8e883195483e2d1f7d3bdfbef59c603acd69f3f6f2ba11b878316d"
+    ],
+    "Kaaba": [
+      "eb7eda56e84c89683cc499bf6e4caa7404c393733b946856b4cf8290dad2b167",
+      "15217f0118b2c7637edb3a5e15087a8a3ecf40b95c6a53fc14aaadd6789b4c44",
+      "16b799d20a61cd7fd86c73a9e1c625e581eee4e911425c2e6a63d31538178c48"
+    ],
+    "Knowledge": [
+      "814a37935b84d142b7055aee9eca269340f53e9bb07773172b53015f19f81779",
+      "0411c4e65bd74314073442cf0095978c9368c618a99c1f711da81fb7f2168668",
+      "2b3fdf60ada8b9a2e8c9f84e85454327555519f8cbdee11b73a833067f9d4744"
+    ],
+    "Kufi": [
+      "26e885483ae2e8b09d6104fcd32330ebe3ebbeb03b9534c02973a9ad8b191c64",
+      "9ed98ec368780ad013157154cdd43a562d6e1ee5824adfe34b2380b3158deaa0",
+      "35d2e750b29cabe32f056b6d750840d385545d2feeff5e72bb9d5ba87c088619"
+    ],
+    "MadinahDome": [
+      "1af794ac27a667b8397b7a23c5d9103b312c1d275f8c023fe25788766ff24010",
+      "b1998ea8d584b2b6fea344d426c321ba93c0f66598cf897f0bd817ed71762434",
+      "394cb51b145477022d459362fc8944e8ffd62921c32ecb3569ec857eab7c1737"
+    ],
+    "MakkahSign": [
+      "3084fb127324c8af10bbc92c702f0c50ca76123f0645e4f9e84b9c3e5960b8f3",
+      "924c73b5f6e5dca2e01ca5b04a125523f3f070eaea43226af44a41a097bdd2f7",
+      "cd49137edd19c7cee6bdb9be0428b02df3159dde8016016494ca0c99853f34b1"
+    ],
+    "Marriage": [
+      "e90728cac8ee8d3323cc5641489e6a21772164d4dc467abf1275a501dfe3b81c",
+      "c6dd458ea450aa920a476fe0ea99671e62252033154576504cb3d767bc7b12cc",
+      "d63544ecb70dbad26f0ae6178dfada97a0f8b94d46546b7f4a094bc9d293798b"
+    ],
+    "Memorisation": [
+      "c0bba20374e7c7c89055cde4913334ff21edf82095fa78b67337c3b262facdbc",
+      "c2fd717579556e4f159afdf9ab67d9b39220eed7952fb4809266662ce8ae055e",
+      "c5d1b431696aa03c3a8b64bf9b9027365df227b52a4e0efed77cce59f62e04fd"
+    ],
+    "Mercy": [
+      "aee84e005afa129d43ac6923b005d78d5d5643a81b191aec8f6abc4cc500f316",
+      "c0d3b356c25aacc967dd07ba865180dc4705376c118acde7a33443f018c137bd",
+      "9f38aaaa74b1bef2c42e28c7479d8efd225f6860891bd5261b2b3754dcdd1aac"
+    ],
+    "Mihrab": [
+      "0e85601ca99e0e19f997324eca52dcc08051647213ce65d40aa4d27657bea9c0",
+      "62c5d0ff1b83e8e01fe61294cff092921455fff8847e183d4c760ffd9cc5b8c8",
+      "2e5d78be15af475b445e20cb488c2fc419153b8bef69e18633172ef3f5f6fc1b"
+    ],
+    "Mina": [
+      "f5f0b134a61f66ba5a9e7bf9f69a486cf4d7c066adbbc5f8fa0eebbd518e674a",
+      "abc95567e37be6e298d28984495f0712d468b1ee6fb44749072de9304848ccc3",
+      "6bd18d9ad0aecbf7114e93dd33657c7f9b9b6eba659d01763123c74c29e0408c"
+    ],
+    "Minaret": [
+      "735f4e9465a0dbbb2f4f2e18e038fc87e0a23b64d7f125224f769482dcdfc4ea",
+      "f45f669189ca119c6768a090cbf7632795fe9118cee32b8e3a708a34494c3714",
+      "a5b4a1182824488c4c632a09f00f7cc1fe7b3f967d97cc5f57dc100255b598d2"
+    ],
+    "Minbar": [
+      "9b84822c42187b0a9c79b064ac253d6fe108aed2daaa49d00281b54eb4e3f63f",
+      "ff3f34d8d5cdcb46914c7584398cb7b51a56eea85f41d274264ff39c820fdf20",
+      "c7ea1e7acfa0309faebdca2157fb027a0c848d2b71eb5f1bfb3f845f510867bf"
+    ],
+    "ModestFashion": [
+      "17ec223c60d6fcba427884ec5c3c7552f3ecef4ded7721164ecc480799bc352d",
+      "121406f4e5db2c3ed804501f13a62f51fb9838c7d75b9d32053eca53dc4c9d26",
+      "bb950d1291e94839a53518ea5ef48ffa5fc0acf11d61087f342c7f7c0f5df086"
+    ],
+    "Mosque": [
+      "09b8be63adf80957723baa65b81a83edc13b3f4aa5110c73bb4164ae717b28a8",
+      "6c42a8ec31b57607f0b4388c8dc5aa687e259115a88740d1253db421c1be5cd6",
+      "988c250290889b694fd130010895724bc3bac4411db3f7555c99a01710b6e4ae"
+    ],
+    "MosqueCommunity": [
+      "436362df20dc9881a5d1d2f0bd905f7e37be8d27a5009250f8dbeba1a0425822",
+      "636d90d0f672aa5ae1672e73987b5676eea7f762210a3878adbfe64ad8fc7f9a",
+      "edf46cc019a99ead9a551173768bbce13e91a503235608fa43356298abce69bb"
+    ],
+    "MosqueDome": [
+      "1a804d27cfe8610271f5e4d46b8631c03328b7715658b69eb821f8b57a58daba",
+      "b66366e7dfe2d8052c358e260df059054d034ae27771fb74eecc95c3e542e02d",
+      "87d082e755fa932d525ccc26777e054fbe0c57fa407f1c1ae39445e78c62efd5"
+    ],
+    "MosqueEntrance": [
+      "67b7cf07f07dd43fd5c3bea9baa7bd5d2bd32f245993c3d11c4621e59f6431d8",
+      "2d316fadcffb0ad8e2495ca5114fa5c0966ced3729f9343473540ee0c0023078",
+      "4ccb4fc17275e1f31a69717c67658b8c438ec69ea5380968e37cb14466f935a0"
+    ],
+    "MuslimGroup": [
+      "fd0ca1e9ef2a9b57001750f535a8498d0db324f9e51fe7945a15dd7e5f15ff55",
+      "d2edf4bc3fefd159117a21ff4212e889dba0a04a8741968cd6538b325b915fd7",
+      "c490db5ec95e5666617c5c86684ea233664685a2700b9ad587d755e706b6bf0f"
+    ],
+    "OpenQuran": [
+      "82bf0b50cfe2c40cd3eb4136c908d456316272ea031c48ab121d57173f0b4d81",
+      "d8567b065941dc2c8e69a08fdb84a6c7d54e93eb3728c5cae95419a3555b4f23",
+      "09c86b07f8c59d63d16fba806d3cacba5c16fb1ca4b46b4ae3c9ba5f793a9637"
+    ],
+    "Peace": [
+      "18bce3d9a0af2cee1d31ecc77f9a59180d2666d9695c13bb27dee9461a18e87f",
+      "d95c5f43485e9fc75b8bc36429ae2aab06d3a62f8027604627822afc094dd5b4",
+      "351d85c5937c2996baf48aaf047a81be49e52cb11593a8fe964af7668bf4d8f3"
+    ],
+    "Pilgrimage": [
+      "6c60eaa18763afd658f4a0d7ec95986487f0513a63348fa58fee5c80e1b4a4c1",
+      "1de3c33a743bd928ce5a8a11e6d194a81b92c36fe9a1ce07b8761bf8bec8f2e5",
+      "12272a24dea00e8917cfbc9e73f85e477e9a3876491cfa5ec8d3d1de385abec4"
+    ],
+    "PrayerCap": [
+      "79d411c2a0a45eadd27f554acc301d08623fc7dd821b42336ec16e7a1f3a73fb",
+      "12fc31653868cf62596030b8ac2f3786b26a737c71d6d89af217878941c5fa3b",
+      "ceef0bc5d93b7b73178252f963ba4e0c60b373d0c8397f9297ace672f99058b2"
+    ],
+    "PrayerHall": [
+      "d6bc10f18558fe42f254280dee20054683d94d0361ae69bf97b9bfdc3ad03a24",
+      "300f6584329225347d0937ece9e244e8097b8a1e70982c960b30b2f53ac07bcc",
+      "18815b010228261dde8c87e2a45c3306fc59a66cbbda0798035ac341408e7127"
+    ],
+    "PrayerMat": [
+      "11616f0f64b408701a02527a63e71fbfa88a90ca77b83c6331d8e7f4c4fad542",
+      "dbe7a10506a65cff1df5ace3ae547c1bcb2454488c6f847b034e62ab33c3009e",
+      "58f142cd0084c0668b43fe579d4273c992b9a29a7584bfa288172c3c3446a3d8"
+    ],
+    "PrayerTime": [
+      "aaae781a3c0eab4ce1329854f8177bf80a854984fe638610a684b0bcdd105fd8",
+      "3a2592a7228a2ff7fa01f4e88fa5c1e7f4cc321e9b7327921045af3a63d4b6e9",
+      "e918bdef953a174c26f9182f0ad92919cfb73a2bf3fdb52631adf561a4c380d0"
+    ],
+    "Qawmah": [
+      "20b53caef1fc4bbab5ae750cae3269202c62c858f11a8bccefff7ece5645a0dc",
+      "92531280539d7e58eba37f3df47f7a22c36ae53ed8cdf5f85be2bd013948d157",
+      "076bfea1ea54b68055e9318f009e1432a4a7a82dd548f017e7458455fc9b62c7"
+    ],
+    "QiblaCompass": [
+      "c8e4857068364b86d3ccf9c07aa87d86d2bca658db2809679ea482cee8f28bf2",
+      "2f8c83ffe704c979e15e2c8b4113f93a1a5517c091d29394616df603eeff3ef5",
+      "b5454f98210d46bb7a6b67e34bd5af8d816c13cc3a8fe1ec4aa24fcb87c5ea00"
+    ],
+    "Qiyam": [
+      "8dd0999f9eafa5a0bacb355146b1f4e2fa717c218d5cabc100e64c915a71ebcb",
+      "a8d57209b6681ce37ceb896f5e4018d63fa946fcee2b95f0789fb59ed1748f3e",
+      "2373b2b879c34f8ecfc35a9ac91087b8d10ba9735f9fe30d0ece2a952f0b0b9d"
+    ],
+    "Quran": [
+      "1bc0928ccd1565dbf911977ef166f4850907cd03fd4dea16a1dcaca4e666cc6b",
+      "93e385d1f01fbc0c61733562457b6b0728e6606b277d4369e0c7da320740bc85",
+      "9605e30185407e5281b2f4342bb9a8f3290acc27e3b4430b7b29a26eb5cf6a9e"
+    ],
+    "QuranStand": [
+      "3cf7a588b427a771ac0f7910829c31f695ac02ebd00c605850b1869d1dd1b9a1",
+      "1e667ffba0ae458673b606f9819aaf4d27e3e8d719dd2e2fbb5c144d3de7f535",
+      "5a8fa6108065bc2edecacfbfae32e7f101865b644c7d35647ef6b9f2bff9f6a8"
+    ],
+    "Ramadan": [
+      "cd2765f8594a48f779b687ab9d640be9a757bb44a94a472d506c3aca3c58d436",
+      "3ee578bd6f569266f4c1939a684f5f6403419f64826c917053082df745a30e86",
+      "3aadbef37f8e16511dd406371068882c91757bf41ff4ff092af5c5954fd9499c"
+    ],
+    "RamadanLantern": [
+      "745ec501d5c202e4e3fa765568989617919bb9cad1983ebb3913cd7ac19d0429",
+      "20b4f0cc6b1c540ec5c24f637b2ad778e5c75226f9018c16bf2f9c90569c7ab2",
+      "146354fc74b426be0f0f0991ef08177f85dacd568bec13151e7ae2e5fe8c5bad"
+    ],
+    "Reading": [
+      "86a8282060eb7a07a8a9f1003683115e09955d07e216abee6dd57257704d85f4",
+      "8bc999ac98458b6351ec1084d9d08cb5de0d6a80a6be674de24d8d97c19679a6",
+      "fcefd3b5811479cb09692d0cafb037322f15080b564914d5c3ac8453517f5771"
+    ],
+    "Ruku": [
+      "79026e7e4c508e684dab7042615d25cc34e3b69ab77a0575d01288e3908b6c0b",
+      "310c5e01cb712a22a92f823bf1ffa0521ed6afc7cc247c67204404e1e49ce20c",
+      "a08805b0556a5223cd82ff356644228f00bc1a852253cc1a2bd0e26528913ed2"
+    ],
+    "Sabr": [
+      "726f10e6d0de6289100a49b06b4942081795c87adccbce3003d886cb5985a754",
+      "d870ff47611825b8cf3acb1722f3aec561de2b6762b7f33e7f7d1f9572731dd6",
+      "f266d4f355aa8ce01bebd29167f4aba60bf13dc876effc004a56d6c313f35411"
+    ],
+    "Sadaqah": [
+      "7e2456f6251d55359664b12b266709ac9e97222ca186d939753d24dd825ec82f",
+      "53b02196d7c29f43898ed7a928ff4ac2922972337970776ae5975264e9ee5436",
+      "485b9fa22798c3a83ddd303429eb3823d8e2753681fd797b6c1adf1754741976"
+    ],
+    "SafaMarwah": [
+      "bc3cdd42dabf303c12dae555b95cf4a8cfa66c62223ae9988a0310acef10458e",
+      "ae31d049b9362c861057bb00438fa55515680d6226adb031330e0b729fca0d06",
+      "2542bce3949b5d80cd37e8b1f008197d4d83fef86ea52e5091451cfbd3fa6e68"
+    ],
+    "StarAndCrescent": [
+      "0687673cf2d033a6f5788424c0aeb2649dc8729bedfafa66b321b87c4696a2bc",
+      "7b8791bca887c0f1179d6b4ff44984f1f991eec717b907c6a52ec521085a8d3a",
+      "43eaffced2e64b104dffaa0ecd5391741147de413105533db97963aac916bead"
+    ],
+    "Suhoor": [
+      "6dcb6b0e348a2958cd35410847fd7aaa77f82a21e068475096f4f9f0bf7801ed",
+      "1584ef03e3ebb6aeecf31bd35af2625c099ee0c45ce96687706b14e6fa9e16a4",
+      "ed05e79e62a64f21dbf4891c8938bc5058b399935c2ecc6b78cc2e6cfc314b44"
+    ],
+    "Sujood": [
+      "f43db96ec9b93a23df7ac669aaef635b2f7de7da649a9b7b022fc9ff95d3ff08",
+      "680f2cf95eeba1e7cb36f0a409ff05f28ffc9d5fdcc07f56950b44897e1e52f4",
+      "434d7bbe8bfe0b21f97148ec0f2ed173299cb62613ff5ab20fdf8f8f98d098cb"
+    ],
+    "Takbir": [
+      "fdbb98d8e69ba1cfc86de7b7b6318fbbc2e56fc4962d830e09b593f775eb219b",
+      "958e6bdef25279d44f01d60ab2080ee1fd509cc38b54bae8af54d899b0b27eb8",
+      "1dd0e90e4dce109dc3fe950c6a5a927ed6afe45b1469aebfbb501fa8ebba8fc9"
+    ],
+    "Tasbih": [
+      "42c50d8a0fd93ead30672fe2a35a9cb0779098fdf964986d91676c1773304c3c",
+      "f927043c808efb048456fa65aadb671f3891f41dd1fce27e47abcd151ee43a08",
+      "bc0474c705a78b48a246f22a1d5a19e57451c9bef749bc2df92518e44d2641cf"
+    ],
+    "Tashahhud": [
+      "ed209928f97449136ae8ce8f1e312545a8f7a6a84ed594d3d3eb00bf0cf4cde5",
+      "2274ea46f9a59167258d0adacacef4d6a678b2b9a9c0c58c3b4a1bd1bde25181",
+      "2a8807a77809d2310e8016a034257fe7038dd2670d2bda6a55cf23889f71ec46"
+    ],
+    "Taslim": [
+      "883acab9bf5e6e25cf86e4b02021f2f7c4fba6554ef3991b3254c30afaf0141f",
+      "46122f86d1f93f802b3d70736724a899119c344705cdd065947239ab118346a4",
+      "73b30b9a67eaea32478f642d35cb82569575085d588e4a64e30dd62c162936f2"
+    ],
+    "Tawaf": [
+      "f1250a445a675b41e6ac110a4ad94b706884c5a81b2806ee8852abe87bed8cd7",
+      "4ba90fddbf88dd79769d2ebbceb84326ea1f9e1e5febbf275f9de4bc24d14590",
+      "3ade9a4bb728762845881a3e004b78eecb8494c126b10a04369c2fd8eaa8b1e3"
+    ],
+    "Tawakkul": [
+      "999118f7e8313347b777264a72de9a6d77560c33951664af564c4813b6603b4e",
+      "3a6f7896184f5183f79ced74bfa7057cf9c602645ab20d3bf1c9f11ee474edae",
+      "58c6035d7940ea63d1afe88e3d01be7a4c2418b53bda34cbac5847d298d91819"
+    ],
+    "Tayammum": [
+      "aae0b1495d451535707ebc943d341a40ec6416e467b2f98006c1ae972ea7fe76",
+      "21ed9674c09b7916dd8fc4ad3778a18e275a6891225fefa54cddb2a1a246f80e",
+      "97b3d2f1ca1c7d8f882405433c87bc1d08703d453d84541fccf022ee512346c6"
+    ],
+    "Thobe": [
+      "e0c36e596bb946613c233c731353b9138cb828bb9d7cad82f17f874ba960d8fb",
+      "ac72e0248be1753bfb9614a3d4799fc1ccf7b832964c13c520b2122c0473e132",
+      "cb4fe16d23950090c1df0eee7a4ebc01c0bbba81d9a384856476eba00e44bfc6"
+    ],
+    "Travel": [
+      "0893667acd1eaebc48fdcaa2b605b050193db67bfd4ed2c7df55bc32dfdc7a10",
+      "f22993a4b77df6b1e1dd458786be030f8e2c1c61d222c2d0607a34941c83c55d",
+      "d792a0d089d3d42ca4f1c4001244f7a7adf667038b9e95f225bbe594d006bc44"
+    ],
+    "Umrah": [
+      "fb08a2030401d983f338a1982c78068a6a3b3e0f7dac8d2a9a1f7afef05278a1",
+      "7a47bd122e08f473e4fdd39c8bf52c1d4d970100e212b068c5c1d8a765733909",
+      "57adc4130bbb394eb98d7ed5448250a437d03fd2425bd262f2eac2d515c6f194"
+    ],
+    "Volunteer": [
+      "3dd8e8c94acf0bda1dfd151b61680abecaa98ea1663b011aa3b6fe808f07674c",
+      "78439407d7ecd2edb6022e11f38f81d7ad757b04c0baf3ef32a279005dcd0651",
+      "8b70474ece98c66b17c76fe0c4c9a948e16596649f72dd50f9c58110dfec1393"
+    ],
+    "Water": [
+      "3c155454dd8c9f9b9e76bc43d99b6151874cc7268f547b838a331ff3b759aa86",
+      "0ddf15085fe8ef5e78b777f8fdc901cad0e0bef2b45dd98a4ddef6a6057880a7",
+      "7476933473e65e3dd13c1fb2ee848321f50d47e467c7b1431fabcb983b832ed0"
+    ],
+    "Wedding": [
+      "4f9b429d0027189550bc98faba91460eb9823d851255b10a3d9dd183f3dfc2de",
+      "f8584bfcb42ebb987a42cff10fb299ac1f85869525c26c9240ff2b864f89df55",
+      "8da4c788f2f6de8dd0132441f2fd8e16dfb8cb43d3d3cb8d68d859f4d7ebe30a"
+    ],
+    "WomenCommunity": [
+      "54a95161f3d24ded5b10bb6b4fd27e3effd4dd1760cd931f8531f74f19c3435f",
+      "f811376c87056c92f18cb4961cb060c3b9e16c674c6d9f2157c23a76a5fb7d82",
+      "92e249e8cd3f14c48b65e5fdbeaad907042c9ed13d343b2feedf7899c749faa8"
+    ],
+    "Wudu": [
+      "45d12ceb0e1a6606501c12144c34ac6a3e401777ae11d5520f262cb971a6e92a",
+      "ed52f9a0ccb89d95e52cce2d09dee6660462a58f6ca4c8ac398754e18666ba5d",
+      "393938af1e17ffe68ff344df387361f79b403d869e40ad973e8a3f7e265a58a4"
+    ],
+    "Zakat": [
+      "1fa24a1d08da185810b8d1babdaf362fefc1306a8feeb79cf2af4094f10afdf1",
+      "260cbe381673d070048d3b3e833deecb55e01312b4c070ab33c44d12fbebdbcb",
+      "62ccde3f512fddcb6838fd44a7e826bc98fcbdb2f26b7639104cc20b37bcb927"
+    ],
+    "ZamzamWater": [
+      "8f523c62efcc0ef570b1a84ed956f501ec9f131572b4c5ee6cc7ba1154f8ae30",
+      "933277b6027029f0edf411cd8623d852e9e62f82ba71e7fa22f1454d3a53f69e",
+      "f3f75f7c9ae5f37400c293a33904d75773b13c3b6b239897e798a8c6916be7fb"
+    ]
+  }
+}

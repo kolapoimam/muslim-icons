@@ -1,45 +1,71 @@
-name: Stage npm package
+name: Stage npm packages
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: 'Existing release tag version, e.g. 0.1.0'
+      ref:
+        description: 'Full commit SHA or version tag containing the prepared package versions'
         type: string
         required: true
+      packages:
+        description: 'Package selection (all stages each unpublished version independently)'
+        type: choice
+        options:
+          - all
+          - react
+          - vue
+          - svelte
+          - svg
+        default: all
+      dry_run:
+        description: 'Inspect packages without submitting them to npm'
+        type: boolean
+        default: true
 permissions:
   contents: read
-  id-token: write
+concurrency:
+  group: npm-staging
+  cancel-in-progress: false
 jobs:
-  publish:
+  stage:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout release
-        uses: actions/checkout@v6
+      - uses: actions/checkout@v4
         with:
-          ref: v${{ inputs.version }}
-      - name: Set up Node and npm registry
-        uses: actions/setup-node@v6
+          ref: ${{ inputs.ref }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-      - name: Update npm
-        run: npm install -g npm@latest
-      - name: Verify version
+          cache: npm
+      - name: Verify immutable release source
         env:
-          VERSION: ${{ inputs.version }}
-        run: node -e "if(require('./packages/react/package.json').version !== process.env.VERSION) process.exit(1)"
+          RELEASE_REF: ${{ inputs.ref }}
+        run: node scripts/verify-release-ref.mjs
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
-      - name: Test icons
-        run: npm test
-      - name: Build package
-        run: npm run build
-      - name: Verify package contents
-        run: node scripts/verify-package.mjs
-      - name: Inspect tarball
-        run: npm pack --workspace @muslim-icons/react --dry-run
-      - name: Stage npm package for maintainer approval
-        working-directory: packages/react
+        run: npm ci --no-audit --no-fund
+      - name: Use npm with staged-publishing support
+        run: npm install -g npm@latest
+      - run: npm test
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm run verify:packages
+      - run: npm run test:packages
+      - name: Pack selected packages and optionally stage for maintainer approval
         env:
+          SELECTED_PACKAGES: ${{ inputs.packages }}
+          DRY_RUN: ${{ inputs.dry_run }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-        run: npm stage publish --access public
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            npm run stage-packages -- --packages "$SELECTED_PACKAGES" --dry-run
+          else
+            npm run stage-packages -- --packages "$SELECTED_PACKAGES" --publish
+          fi
+      - name: Preserve inspected tarballs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-package-tarballs
+          path: work/npm/*.tgz
+          if-no-files-found: ignore

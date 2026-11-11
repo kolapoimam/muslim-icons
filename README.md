@@ -1,60 +1,100 @@
 # Muslim Icons
 
-A collection of 50 original outline-style SVG icons for Muslim-focused applications, with React components generated from the same source files.
+**104 outline icons for React, Vue, Svelte, and the web.**
 
-**Release status:** Preparing `@muslim-icons/react@0.1.0`. It is not yet published to npm.
+Building a prayer app, a Quran reader, or a site for your local mosque? Choose the package that fits your project. Every distribution comes from the same SVG artwork, with matching names and a consistent 24 × 24 grid.
 
-## Install
+| Package | For | Install | Guide |
+| --- | --- | --- | --- |
+| `@muslim-icons/react` | React 18 and 19 | `npm install @muslim-icons/react` | [React](packages/react/README.md) |
+| `@muslim-icons/vue` | Vue 3 | `npm install @muslim-icons/vue` | [Vue](packages/vue/README.md) |
+| `@muslim-icons/svelte` | Svelte 5 | `npm install @muslim-icons/svelte` | [Svelte](packages/svelte/README.md) |
+| `@muslim-icons/svg` | HTML, CSS, and JavaScript | `npm install @muslim-icons/svg` | [SVG](packages/svg/README.md) |
 
-After the first npm release:
+New packages become installable after npm release approval; see the [release guide](docs/RELEASING.md) for the first-release steps. React's existing API stays the same.
 
-```sh
-npm install @muslim-icons/react
-```
+## A familiar name in every framework
 
 ```tsx
-import { Mosque, Quran, PrayerMat, Kaaba } from '@muslim-icons/react';
-
-export function Navigation() {
-  return <nav aria-label="Resources">
-    <a href="/mosques"><Mosque aria-hidden="true" /> Mosques</a>
-    <a href="/quran"><Quran aria-hidden="true" /> Quran</a>
-    <a href="/prayer"><PrayerMat aria-hidden="true" /> Prayer</a>
-    <a href="/hajj"><Kaaba aria-hidden="true" /> Hajj</a>
-  </nav>;
-}
+// React
+import { Mosque } from '@muslim-icons/react';
+<Mosque size={32} color="#246b55" strokeWidth={1.5} />
 ```
 
-Icons accept standard SVG attributes, `size` and `absoluteStrokeWidth`. They default to `currentColor`, so CSS can control their color. See the [React package documentation](packages/react/README.md) for customization and accessibility.
+```vue
+<!-- Vue 3 -->
+<script setup>
+import { Mosque } from '@muslim-icons/vue';
+</script>
+<template>
+  <Mosque :size="32" color="#246b55" :strokeWidth="1.5" />
+</template>
+```
 
-## Collection
+```svelte
+<!-- Svelte 5 -->
+<script>
+  import { Mosque } from '@muslim-icons/svelte';
+</script>
+<Mosque size={32} color="#246b55" strokeWidth={1.5} />
+```
 
-The 50 icons cover places and architecture, worship and prayer, Quran and knowledge, Ramadan and Eid, Hajj and Umrah, Muslim lifestyle, and general Islamic concepts.
+```js
+// Vanilla JavaScript: the export is an SVG string
+import { Mosque } from '@muslim-icons/svg';
+document.querySelector('#mosque-icon').innerHTML = Mosque;
+```
 
-Browse [all canonical SVG files](packages/svg/icons). The default design is 24 × 24, 2px outline stroke, round line caps and joins, no fill, and `currentColor`.
+Framework icons support `size`, `color`, `strokeWidth`, and `absoluteStrokeWidth`, along with native SVG attributes. They inherit text color and are decorative by default; add `aria-label` when an icon communicates meaning on its own. The SVG package provides the raw artwork for you to embed or style.
 
-## Contributing and development
+## The collection
 
-Node 22+ is recommended.
+| Category | What you'll find | Icons |
+| --- | --- | ---: |
+| Worship & Prayer | Prayer positions, prayer times, Qibla, Wudu, Ghusl, and Tayammum | 18 |
+| Quran & Knowledge | Books, recitation, memorisation, and learning | 13 |
+| Ramadan & Eid | Fasting, meals, dates, lanterns, and celebrations | 11 |
+| Hajj & Umrah | Pilgrimage rites, the Kaaba, and landmarks | 11 |
+| Places & Architecture | Mosques, domes, minarets, and prayer halls | 11 |
+| Muslim Lifestyle | Family, community, clothing, food, Halal, and Haram | 26 |
+| General Islamic Concepts | Charity, patience, gratitude, and remembrance | 14 |
+| **Total** | **Seven categories** | **104** |
 
-```sh
-npm install
-npm run generate
+[Browse all SVGs](packages/core/icons) or see the [full component list](packages/react/README.md#all-104-icons). `Takbir`, `Qiyam`, `Ruku`, `Qawmah`, `Sujood`, `Jalsah`, `Tashahhud`, and `Taslim` cover prayer positions. Purification icons include `Wudu`, `Ghusl`, and `Tayammum`.
+
+## Working on the collection
+
+Use Node 22 or newer and npm workspaces:
+
+```bash
+npm ci
 npm test
 npm run build
+npm run typecheck
+npm run verify:packages
+npm run test:packages
 ```
 
-Edit original SVGs under `packages/svg/icons/`. The generator creates React components and an icon explorer catalog; generated assets are not the source of truth.
+Edit artwork in `packages/core/icons`. Each public package has an independent build, for example `npm run build -w @muslim-icons/vue`; its prebuild step generates its components from core. The internal demo has its own `npm run dev` command. The separate landing-page repository is not part of this workspace.
 
-- [Contributing](CONTRIBUTING.md)
-- [React package](packages/react)
-- [Release procedure](docs/RELEASING.md)
-- [Report a bug or request an icon](https://github.com/kolapoimam/muslim-icons/issues)
+```text
+packages/
+  core/       canonical SVGs and shared build-time parsing (private)
+  react/      generated React components
+  vue/        generated Vue 3 components
+  svelte/     generated Svelte 5 components
+  svg/        generated SVG files, strings, and catalog
+scripts/      generators, validation, and release tooling
+website/      internal React demo
+.changeset/   independent package versions and release notes
+```
 
-The `website/` directory contains a development icon explorer. The public landing page will be a separate project; there is no deployed site to link yet.
+Read the [architecture notes](docs/ARCHITECTURE.md), [contribution guide](CONTRIBUTING.md), and [release guide](docs/RELEASING.md).
 
-## License
+## Help shape the collection
 
-Software is [MIT licensed](LICENSE). Original artwork is intended for [CC0 1.0](packages/svg/LICENSE), subject to confirmation of contributor rights. Third-party icons should not be copied or relicensed.
+Missing a symbol you use? [Open an icon request](https://github.com/kolapoimam/muslim-icons/issues/new) and tell us what it should represent. Improvements to existing drawings are welcome too.
 
-Maintained by [Kolapo Imam](https://github.com/kolapoimam).
+Software is [MIT licensed](LICENSE). Original SVG artwork carries a [separate notice](packages/core/LICENSE) describing an intended CC0 1.0 dedication, subject to confirmation of contributor rights.
+
+Made and maintained by [Kolapo Imam](https://github.com/kolapoimam).

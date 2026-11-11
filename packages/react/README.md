@@ -12,6 +12,8 @@ Each icon is a React component, drawn on a 24 × 24 grid with rounded strokes. C
 
 [Quick start](#quick-start) · [Categories](#categories) · [Customize](#customize-your-icons) · [All icons](#all-104-icons) · [GitHub](https://github.com/kolapoimam/muslim-icons)
 
+Using another framework? See [Vue 3](https://github.com/kolapoimam/muslim-icons/tree/main/packages/vue), [Svelte 5](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svelte), or [raw SVG](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svg). These packages share the same artwork and component names.
+
 ## At a glance
 
 | | Included |
@@ -180,7 +182,7 @@ For an icon-only button, put the accessible name on the button. A labeled icon a
 
 ## All 104 icons
 
-Open a category to find its exact export names. You can also [browse the SVG source](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svg/icons).
+Open a category to find its exact export names. You can also [browse the SVG source](https://github.com/kolapoimam/muslim-icons/tree/main/packages/core/icons).
 
 ### Worship & Prayer
 
@@ -255,7 +257,7 @@ Found a drawing that could be clearer? We'd like to hear about that too. If you'
 
 The React package code is [MIT licensed](https://github.com/kolapoimam/muslim-icons/blob/main/packages/react/LICENSE).
 
-Original SVG artwork has a [separate license notice](https://github.com/kolapoimam/muslim-icons/blob/main/packages/svg/LICENSE), describing an intended CC0 1.0 dedication subject to confirmation of contributor rights.
+Original SVG artwork has a [separate license notice](https://github.com/kolapoimam/muslim-icons/blob/main/packages/core/LICENSE), describing an intended CC0 1.0 dedication subject to confirmation of contributor rights.
 
 ---
 

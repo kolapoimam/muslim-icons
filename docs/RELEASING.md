@@ -1,31 +1,89 @@
-# Publishing @muslim-icons/react
+# Publishing Muslim Icons
 
-The package lives in `packages/react`. This repository uses npm **staged publishing** for the first version and subsequent releases requiring approval. An npm maintainer explicitly approves each staged version with 2FA on npmjs.com.
+The four public workspaces are `@muslim-icons/react`, `@muslim-icons/vue`, `@muslim-icons/svelte`, and `@muslim-icons/svg`. Core, the repository root, and the demo are private. Each public package has its own version and can be staged independently.
 
-## Before staging
+The release workflow uses npm staged publishing. Submitting a tarball does not make it installable: a maintainer approves it on npm with 2FA.
 
-1. Confirm the npm organization `muslim-icons` exists and the publishing account can manage packages in that scope.
-2. Enable two-factor authentication on the npm account, and review the original SVG artwork rights.
-3. Create a granular npm token with **Read and write (stage only)** access to `@muslim-icons`, with a short expiration. Leave Bypass 2FA disabled.
-4. Save the token as the GitHub Actions repository secret `NPM_PUBLISH_TOKEN`. Never commit or paste it into an issue.
-5. Check that CI succeeds and create a Git tag matching the version, such as `v0.1.0`.
+## 1. Record changes
 
-## Stage the release in GitHub
+```bash
+npm run changeset
+```
 
-Open **Actions → Stage npm package** and select **Run workflow** from `main`. Enter `0.1.0`.
+Select affected public packages. A shared artwork change affects all four packages; a framework-specific change can affect only that package. The initial changeset prepares React's next patch and first `0.1.0` versions for Vue, Svelte, and SVG.
 
-The workflow checks out tag `v0.1.0`, installs dependencies, runs tests, builds the package, verifies the compiled entry points, checks the tarball, and runs `npm stage publish --access public` inside `packages/react`.
+## 2. Prepare independent versions
 
-Staging does **not** make the release installable. For a brand-new package it may create a public placeholder until you approve the staged version.
+On a release branch, run:
 
-## Approve the release on npm
+```bash
+npm ci
+npm run version-packages
+npm test
+npm run build
+npm run typecheck
+npm run verify:packages
+npm run test:packages
+```
 
-Sign in to npmjs.com as a package maintainer. Open the **Staged Packages** tab, review the queued `@muslim-icons/react` release, and click **Approve**. Complete the interactive 2FA challenge. Check https://www.npmjs.com/package/@muslim-icons/react after approval and try installing it in a separate React app.
+Review and commit the updated versions, changelogs, consumed changesets, and lockfile. Use a current npm version with `npm stage` support when staging locally. `0.0.0` versions are development placeholders and cannot be submitted by the staging script.
 
-## Future releases
+Merge the prepared release commit through your normal review process. Every selected package version must match that commit. Never reuse a published version or move an existing release tag.
 
-After the first approval, consider configuring a trusted publisher in npm package settings for `kolapoimam/muslim-icons`, workflow filename `publish.yml`, which can eliminate the static token. Remove the `NPM_PUBLISH_TOKEN` secret and revoke its token if migrating.
+## 3. Identify the source
 
-Never reuse a published npm version. Update the package version, run CI, create the matching tag, and stage or publish each new version deliberately.
+Use the release commit's full 40-character SHA or a package-specific tag:
+
+```bash
+git tag @muslim-icons/vue@0.1.0 <release-commit-sha>
+git push origin @muslim-icons/vue@0.1.0
+```
+
+One commit can contain several independently versioned packages. The workflow accepts that commit SHA to stage them together. Existing `v0.x.x` tags remain unchanged and available as historical React releases.
+
+## 4. Configure npm access
+
+The npm publishing account must have permission for each package under the `muslim-icons` scope. Before first release, check that the Vue, Svelte, and SVG package names are available and that the repository's `NPM_PUBLISH_TOKEN` covers the new names or the scope.
+
+Keep the existing granular **Read and write (stage only)** token in the GitHub Actions secret `NPM_PUBLISH_TOKEN`. Keep Bypass 2FA disabled. The secret is passed only to the final staging step. Never paste credentials into commits, issues, or workflow inputs.
+
+A trusted publisher can be considered later after verifying the intended npm publishing flow for each package; this migration preserves staged publishing and maintainer approval.
+
+## 5. Inspect and stage
+
+Open **Actions → Stage npm packages**. Enter the immutable source ref, choose one package or `all`, and leave `dry_run` enabled for the first inspection.
+
+The workflow installs from the lockfile, tests, builds, checks types, validates tarballs in standalone consumers, and packs the selection. Download the inspected tarballs from its artifacts. A dry run does not submit packages.
+
+Run it again with `dry_run` disabled when ready. The script preflights every selected package and skips versions already publicly published. It submits the exact packed tarballs with public access and the `latest` tag. This flow accepts stable versions only; prerelease versions require a separate dist-tag flow.
+
+For local staging from a clean committed checkout with npm authentication already configured:
+
+```bash
+npm run build
+npm run stage-packages -- --packages vue,svg --dry-run
+npm run stage-packages -- --packages vue,svg --publish
+```
+
+Without `--publish`, the command is always a dry run. Individual clean builds also work, such as `npm run build -w @muslim-icons/vue`; selected packages must be built before staging.
+
+### Partial success and retries
+
+Multi-package staging is not atomic. The command reports a result for each package and stops on a failed submission. Earlier successful submissions remain staged. Review npm **Staged Packages** before retrying a selection; a staged-but-unapproved version is not yet a publicly published version, so it will not be automatically skipped. Retry only packages that still need submission.
+
+Registry failures other than a genuine missing-package `E404` abort the preflight; they are not treated as a new package.
+
+## 6. Approve on npm
+
+Sign in as a package maintainer, open **Account Settings → Staged Packages**, review each selected version, and approve it with 2FA. Until approval, a new package may show a placeholder and the submitted version is not installable.
+
+After approval, verify the public version and try installing it in a fresh project:
+
+```bash
+npm view @muslim-icons/vue version
+npm install @muslim-icons/vue
+```
+
+Repeat for every approved package. React users can keep their existing imports throughout this migration.
 
 Reference: https://docs.npmjs.com/staged-publishing/

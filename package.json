@@ -4,16 +4,32 @@
   "version": "0.1.0",
   "type": "module",
   "workspaces": [
-    "packages/react",
+    "packages/*",
     "website"
   ],
   "scripts": {
     "generate": "node scripts/generate.mjs",
-    "build": "npm run generate && npm run build -w @muslim-icons/react && npm run build -w muslim-icons-website",
-    "test": "npm run generate && node --test scripts/*.test.mjs",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run generate && node --test scripts/icons.test.mjs scripts/generator.test.mjs scripts/release.test.mjs",
+    "test:packages": "node --test scripts/packed-packages.test.mjs",
+    "verify:packages": "node scripts/verify-package.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version && npm install --package-lock-only --ignore-scripts",
+    "stage-packages": "node scripts/stage-packages.mjs",
     "dev": "npm run dev -w muslim-icons-website"
   },
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "@changesets/cli": "^2.29.0",
+    "@vue/server-renderer": "^3.5.0",
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.1.0",
+    "svelte": "^5.0.0",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.0",
+    "vue-tsc": "^3.3.14"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
