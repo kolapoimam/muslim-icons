@@ -2,6 +2,8 @@ name: CI
 on:
   push:
   pull_request:
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,6 +12,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install
-      - run: npm test
-      - run: npm run build
+          package-manager-cache: false
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Validate SVGs and exports
+        run: npm test
+      - name: Build package and icon explorer
+        run: npm run build
+      - name: Verify npm entry points
+        run: node scripts/verify-package.mjs
+      - name: Check tarball contents
+        run: npm pack --workspace @muslim-icons/react --dry-run
