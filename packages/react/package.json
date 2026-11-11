@@ -1,6 +1,6 @@
 {
   "name": "@muslim-icons/react",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "104 distinct Muslim-themed outline SVG icons for React",
   "license": "MIT",
   "type": "module",
@@ -25,7 +25,7 @@
     "url": "git+https://github.com/kolapoimam/muslim-icons.git",
     "directory": "packages/react"
   },
-  "homepage": "https://github.com/kolapoimam/muslim-icons#readme",
+  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/react/README.md",
   "bugs": {
     "url": "https://github.com/kolapoimam/muslim-icons/issues"
   },
