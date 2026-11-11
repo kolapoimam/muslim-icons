@@ -1,0 +1,13 @@
+import React, { createRef } from 'react';
+import { Mosque, createIcon, type IconProps } from '@muslim-icons/react';
+import { Mosque as VueMosque, type IconProps as VueIconProps } from '@muslim-icons/vue';
+import { h } from 'vue';
+import { Mosque as SvgMosque, catalog } from '@muslim-icons/svg';
+const props: IconProps = { size: 32, color: 'green', strokeWidth: 1.5, absoluteStrokeWidth: true, 'aria-label': 'Mosque' };
+const icon = <Mosque {...props} ref={createRef<SVGSVGElement>()} onClick={event => event.currentTarget.focus()} />;
+const Custom = createIcon('Custom', <path d="M2 2h20" />);
+const vueProps: VueIconProps = { size: 32, color: 'green', strokeWidth: 1.5, absoluteStrokeWidth: true };
+const vueIcon = h(VueMosque, vueProps);
+const raw: string = SvgMosque;
+const slug: string = catalog[0].slug;
+void [icon, Custom, vueIcon, raw, slug];

@@ -5,21 +5,22 @@ on:
 permissions:
   contents: read
 jobs:
-  build:
+  packages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
-          package-manager-cache: false
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
-      - name: Validate SVGs and exports
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Validate canonical SVGs, generators and release selection
         run: npm test
-      - name: Build package and icon explorer
+      - name: Build all public packages and internal demo
         run: npm run build
-      - name: Verify npm entry points
-        run: node scripts/verify-package.mjs
-      - name: Check tarball contents
-        run: npm pack --workspace @muslim-icons/react --dry-run
+      - name: Check native framework types
+        run: npm run typecheck
+      - name: Verify published entry points and SVG assets
+        run: npm run verify:packages
+      - name: Install and test packed packages in standalone consumers
+        run: npm run test:packages

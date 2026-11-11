@@ -1,0 +1,65 @@
+{
+  "name": "@muslim-icons/vue",
+  "version": "0.0.0",
+  "description": "104 Muslim-themed outline icons for Vue 3",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "ARTWORK-LICENSE"
+  ],
+  "author": {
+    "name": "Kolapo Imam",
+    "url": "https://github.com/kolapoimam"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolapoimam/muslim-icons.git",
+    "directory": "packages/vue"
+  },
+  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/vue/README.md",
+  "bugs": {
+    "url": "https://github.com/kolapoimam/muslim-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "muslim",
+    "islamic",
+    "vue"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "node ../../scripts/generate.mjs --target vue",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "typecheck": "node ../../scripts/generate.mjs --target vue && tsc --noEmit"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}

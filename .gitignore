@@ -4,3 +4,14 @@ dist/
 .env
 .env.local
 .DS_Store
+
+# Reproducible generated output (canonical source is packages/core/icons)
+packages/react/src/generated/
+packages/vue/src/generated/
+packages/svelte/src/generated/
+packages/svg/src/generated/
+website/public/icons/
+website/src/catalog.generated.ts
+.svelte-kit/
+*.tsbuildinfo
+work/

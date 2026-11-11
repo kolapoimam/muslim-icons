@@ -1,0 +1,60 @@
+{
+  "name": "@muslim-icons/svelte",
+  "version": "0.0.0",
+  "description": "104 Muslim-themed outline icons for Svelte 5",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "ARTWORK-LICENSE"
+  ],
+  "author": {
+    "name": "Kolapo Imam",
+    "url": "https://github.com/kolapoimam"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolapoimam/muslim-icons.git",
+    "directory": "packages/svelte"
+  },
+  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/svelte/README.md",
+  "bugs": {
+    "url": "https://github.com/kolapoimam/muslim-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "muslim",
+    "islamic",
+    "svelte"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "node ../../scripts/generate.mjs --target svelte",
+    "build": "svelte-package -i src -o dist",
+    "typecheck": "node ../../scripts/generate.mjs --target svelte && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "svelte": "^5.0.0",
+    "@sveltejs/package": "^2.3.0",
+    "svelte-check": "^4.0.0",
+    "typescript": "^5.7.3"
+  }
+}

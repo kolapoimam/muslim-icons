@@ -1,0 +1,63 @@
+{
+  "name": "@muslim-icons/svg",
+  "version": "0.0.0",
+  "description": "104 Muslim-themed outline icons for HTML, CSS and JavaScript",
+  "license": "SEE LICENSE IN ARTWORK-LICENSE",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "ARTWORK-LICENSE"
+  ],
+  "author": {
+    "name": "Kolapo Imam",
+    "url": "https://github.com/kolapoimam"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kolapoimam/muslim-icons.git",
+    "directory": "packages/svg"
+  },
+  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/svg/README.md",
+  "bugs": {
+    "url": "https://github.com/kolapoimam/muslim-icons/issues"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "muslim",
+    "islamic",
+    "svg"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "node ../../scripts/generate.mjs --target svg",
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean && node ../../scripts/copy-svg-assets.mjs",
+    "typecheck": "node ../../scripts/generate.mjs --target svg && tsc --noEmit"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./icons/*.svg": "./dist/icons/*.svg",
+    "./catalog.json": "./dist/catalog.json"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  }
+}
