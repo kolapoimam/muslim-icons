@@ -1,0 +1,19 @@
+{
+  "name": "muslim-icons-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "packages/react",
+    "website"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate.mjs",
+    "build": "npm run generate && npm run build -w @muslim-icons/react && npm run build -w muslim-icons-website",
+    "test": "npm run generate && node --test scripts/*.test.mjs",
+    "dev": "npm run dev -w muslim-icons-website"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
