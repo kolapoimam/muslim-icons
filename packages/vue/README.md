@@ -2,6 +2,8 @@
 
 104 outline icons as native Vue 3 components. Use the same collection and component names as the React package, with Vue props, slots, and event handling.
 
+[Explore the icons](https://muslimicons.vercel.app) · [GitHub](https://github.com/kolapoimam/muslim-icons)
+
 ## Install
 
 ```bash

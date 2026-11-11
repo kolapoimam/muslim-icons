@@ -10,7 +10,7 @@ Building a prayer app, a Quran reader, or a website for your local mosque? Musli
 
 Each icon is a React component, drawn on a 24 × 24 grid with rounded strokes. Change the size, color, or stroke weight to fit your interface.
 
-[Quick start](#quick-start) · [Categories](#categories) · [Customize](#customize-your-icons) · [All icons](#all-104-icons) · [GitHub](https://github.com/kolapoimam/muslim-icons)
+[Website](https://muslimicons.vercel.app) · [Quick start](#quick-start) · [Categories](#categories) · [Customize](#customize-your-icons) · [All icons](#all-104-icons) · [GitHub](https://github.com/kolapoimam/muslim-icons)
 
 Using another framework? See [Vue 3](https://github.com/kolapoimam/muslim-icons/tree/main/packages/vue), [Svelte 5](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svelte), or [raw SVG](https://github.com/kolapoimam/muslim-icons/tree/main/packages/svg). These packages share the same artwork and component names.
 

@@ -2,6 +2,8 @@
 
 **104 outline icons for React, Vue, Svelte, and the web.**
 
+[Explore the icons](https://muslimicons.vercel.app) · [GitHub](https://github.com/kolapoimam/muslim-icons)
+
 Building a prayer app, a Quran reader, or a site for your local mosque? Choose the package that fits your project. Every distribution comes from the same SVG artwork, with matching names and a consistent 24 × 24 grid.
 
 | Package | For | Install | Guide |

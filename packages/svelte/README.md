@@ -2,6 +2,8 @@
 
 104 outline icons as native Svelte 5 components. The names match the React and Vue packages, and every component is generated from the same SVG artwork.
 
+[Explore the icons](https://muslimicons.vercel.app) · [GitHub](https://github.com/kolapoimam/muslim-icons)
+
 ## Install
 
 ```bash

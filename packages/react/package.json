@@ -25,7 +25,7 @@
     "url": "git+https://github.com/kolapoimam/muslim-icons.git",
     "directory": "packages/react"
   },
-  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/react/README.md",
+  "homepage": "https://muslimicons.vercel.app",
   "bugs": {
     "url": "https://github.com/kolapoimam/muslim-icons/issues"
   },

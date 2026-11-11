@@ -20,7 +20,7 @@
     "url": "git+https://github.com/kolapoimam/muslim-icons.git",
     "directory": "packages/svelte"
   },
-  "homepage": "https://github.com/kolapoimam/muslim-icons/blob/main/packages/svelte/README.md",
+  "homepage": "https://muslimicons.vercel.app",
   "bugs": {
     "url": "https://github.com/kolapoimam/muslim-icons/issues"
   },
