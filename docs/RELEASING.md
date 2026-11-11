@@ -1,37 +1,31 @@
 # Publishing @muslim-icons/react
 
-Publish from the `packages/react` workspace, not the monorepo root.
+The package lives in `packages/react`. This repository uses npm **staged publishing** for the first version and subsequent releases requiring approval. An npm maintainer explicitly approves each staged version with 2FA on npmjs.com.
 
-## First publication
+## Before staging
 
-Before publishing:
-1. Ensure that the `muslim-icons` npm organization exists and you can publish to it. The GitHub account does not grant ownership of the npm scope.
-2. Review original SVG licensing and contributor rights.
-3. Verify GitHub CI, the full production build, and a test installation in a clean React project.
-4. Inspect the tarball.
+1. Confirm the npm organization `muslim-icons` exists and the publishing account can manage packages in that scope.
+2. Enable two-factor authentication on the npm account, and review the original SVG artwork rights.
+3. Create a granular npm token with **Read and write (stage only)** access to `@muslim-icons`, with a short expiration. Leave Bypass 2FA disabled.
+4. Save the token as the GitHub Actions repository secret `NPM_PUBLISH_TOKEN`. Never commit or paste it into an issue.
+5. Check that CI succeeds and create a Git tag matching the version, such as `v0.1.0`.
 
-```sh
-npm install
-npm test
-npm run build
-npm pack --workspace @muslim-icons/react --dry-run
-npm login
-npm publish --workspace @muslim-icons/react --access public
-```
+## Stage the release in GitHub
 
-The first release requires npm account authorization and 2FA, because the package must exist before a trusted publisher can be configured. The package version currently is `0.1.0`. The tarball must include compiled ESM/CJS, declarations, LICENSE and README.
+Open **Actions → Stage npm package** and select **Run workflow** from `main`. Enter `0.1.0`.
 
-## Subsequent releases: GitHub Actions trusted publishing
+The workflow checks out tag `v0.1.0`, installs dependencies, runs tests, builds the package, verifies the compiled entry points, checks the tarball, and runs `npm stage publish --access public` inside `packages/react`.
 
-After the first publication, under the npm package's **Settings → Trusted publishing**, configure:
+Staging does **not** make the release installable. For a brand-new package it may create a public placeholder until you approve the staged version.
 
-- GitHub user: `kolapoimam`
-- Repository: `muslim-icons`
-- Workflow filename: `publish.yml`
-- Permit `npm publish`
+## Approve the release on npm
 
-This authorizes the manual workflow in `.github/workflows/publish.yml` to publish with OIDC rather than an npm token. The workflow checks out a version tag, installs dependencies, runs tests, builds, and publishes. It requires Node 24 and npm 11.5.1 or newer.
+Sign in to npmjs.com as a package maintainer. Open the **Staged Packages** tab, review the queued `@muslim-icons/react` release, and click **Approve**. Complete the interactive 2FA challenge. Check https://www.npmjs.com/package/@muslim-icons/react after approval and try installing it in a separate React app.
 
-For each release, change the version in `packages/react/package.json`, document the change, merge after CI passes, create a matching `vX.Y.Z` tag, then run the workflow with that version.
+## Future releases
 
-Verify the resulting package at https://www.npmjs.com/package/@muslim-icons/react. A previously published npm version cannot be overwritten.
+After the first approval, consider configuring a trusted publisher in npm package settings for `kolapoimam/muslim-icons`, workflow filename `publish.yml`, which can eliminate the static token. Remove the `NPM_PUBLISH_TOKEN` secret and revoke its token if migrating.
+
+Never reuse a published npm version. Update the package version, run CI, create the matching tag, and stage or publish each new version deliberately.
+
+Reference: https://docs.npmjs.com/staged-publishing/
