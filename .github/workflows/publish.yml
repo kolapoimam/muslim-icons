@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
-          package-manager-cache: false
       - name: Update npm
         run: npm install -g npm@latest
       - name: Verify version
